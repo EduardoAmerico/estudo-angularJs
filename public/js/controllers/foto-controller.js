@@ -1,8 +1,19 @@
 // public/js/controllers/foto-controller.js
 
 angular.module('alurapic')
-    .controller('FotoController', function($scope, $http) {
+    .controller('FotoController', function($scope, $http, $routeParams) {
 
+        if($routeParams.fotoId){
+            $http.get('v1/fotos/' + $routeParams.fotoId)
+            .success(function(){
+                $scope.foto = foto;
+               
+            })
+            .error(function(erro){
+                console
+                $scope.mensagem ='Erro ao buscar foto: ' + erro;
+            });
+        }
         $scope.foto = {};
         $scope.mensagem = '';
 
@@ -19,5 +30,6 @@ angular.module('alurapic')
            }
             
         };
+        
 
     });
