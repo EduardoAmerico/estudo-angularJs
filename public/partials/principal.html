@@ -18,7 +18,7 @@
 <div class="row">
     <meu-painel ng-repeat="foto in fotos" titulo="{{foto.titulo}}" class="col-md-2">
         <minha-foto url="{{foto.url}}" titulo="{{foto.titulo}}"></minha-foto>
-        <a href="" class="btn btn-primary btn-block">Editar</a>
+        <a href="fotos/edit/{{foto._id}}" class="btn btn-primary btn-block">Editar</a>
         <button ng-click="remover(foto)" class="btn btn-danger btn-block">Remover</button>
     </meu-painel><!-- fim painel -->
 </div>
