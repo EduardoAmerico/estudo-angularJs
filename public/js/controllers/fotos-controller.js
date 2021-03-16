@@ -11,13 +11,7 @@ angular.module('alurapic').controller('FotosController', function ($scope, recur
 		console.log(erro)
 	})
 
-	//buscar com http
-	// $http.get('v1/fotos')
-	// .success(function(fotos){
-	// 	$scope.fotos = fotos;
-	// }).error(function(error){
-	// 	console.log(error)
-	// });
+
 	
 	
 
@@ -32,6 +26,14 @@ angular.module('alurapic').controller('FotosController', function ($scope, recur
 			$scope.mensagem = ('Não coseguiu remover a foto: ' + foto.titulo);
 		});
 	};
+	
+	//buscar com http
+	// $http.get('v1/fotos')
+	// .success(function(fotos){
+	// 	$scope.fotos = fotos;
+	// }).error(function(error){
+	// 	console.log(error)
+	// });
 
 	//deletar com http
 	// $scope.remover = function (foto) {
