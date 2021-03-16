@@ -26,6 +26,7 @@ angular.module('alurapic')
                 .success(function () {
                     $scope.foto = {};
                     $scope.mensagem = 'Foto editada com sucesso';
+                    $scope.formulario.$setPristine();
                 })
                 .error(function (erro) {
                     $scope.mensagem = 'Erro ao editar a foto: ' + $scope.foto.titulo;
@@ -36,6 +37,7 @@ angular.module('alurapic')
                         .success(function () {
                             $scope.foto = {};
                             $scope.mensagem = 'Foto cadastrada com sucesso';
+                            $scope.formulario.$setPristine();
                         })
                         .error(function (erro) {
                             $scope.mensagem = 'Erro ao incluir formulario: ' + erro;
